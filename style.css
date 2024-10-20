@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: josefin Sans, sans-serif;
+    color: #fff;
+
+    & *::selection {
+        background-color: #ff0000a5;
+        color: #fff;
+    }
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    overflow: hidden;
+    position: relative;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #ff0000;
+}
+
+/** utility classes **/
+.padding-inline {
+    padding-inline: 80px;
+}
+
+.padding-inline2 {
+    padding-inline: 170px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover-links {
+    border-bottom: 2.2px solid #ff000000;
+}
+
+.hover-links:hover {
+    border-bottom: 2.2px solid #ff0000;
+}
+
+.btn-hover {
+    background-color: transparent;
+    border: 2.5px solid #fff;
+    transition: all ease-in-out 0.4s;
+}
+
+.btn-hover:hover {
+    background-color: #6495ed;
+    border: solid 2.5px #6495ed;
+}
+
+.box-hover {
+    box-shadow: 10px 10px 20px #00000000, -10px -10px 20px #00000000;
+    transition: all ease-in-out 0.5s;
+}
+
+.box-hover:hover {
+    box-shadow: 10px 10px 20px #0000002d, -10px -10px 20px #00000027;
+}
+
+/** page 1 **/
+.page1 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://uniofeduford.netlify.app/images/banner.png);
+    background-size: cover;
+    background-position: center;
+}
+
+/** header **/
+nav {
+    width: 100%;
+    height: 100px;
+}
+
+.nav {
+    justify-content: space-between;
+}
+
+.web-logo img {
+    width: 9rem;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-content {
+    gap: 10px;
+}
+
+.nav-content li {
+    list-style: none;
+}
+
+.nav-content li a {
+    text-decoration: none;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    padding-bottom: 8px;
+    transition: all ease-in 0.2s;
+}
+
+/** page1-center **/
+.page1-center {
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    justify-content: flex-start;
+    padding-block: 150px;
+}
+
+.page1-center h1 {
+    font-size: 4.1rem;
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.page1-center p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.page1-center .btn {
+    font-size: 0.82rem;
+    padding: 15px 45px;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: arial;
+    word-spacing: 1px;
+}
+
+/** page2 **/
+.page2 {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.courses-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding-top: 110px;
+}
+
+.courses-section h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 0.6;
+}
+
+.courses-section .para {
+    color: #000;
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding-inline: 30px;
+}
+
+.course-box {
+    width: 100%;
+    gap: 40px;
+}
+
+.course-box .box {
+    height: 400px;
+    width: 30%;
+    background-color: #fff3f3;
+    border-radius: 10px;
+    padding: 30px 28px;
+}
+
+.course-box .box h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 26px;
+}
+
+.course-box .box p {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+/** campus-section **/
+.campus-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.campus-section h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 0.6;
+    text-transform: capitalize;
+}
+
+.campus-section p {
+    color: #000;
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.campus-box {
+    gap: 40px;
+    width: 100%;
+}
+
+.campus-box .box2 {
+    height: 460px;
+    width: 30%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.campus-box .box2 h3 {
+    color: #fff;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.campus-box .box2:hover h3 {
+    top: 40%;
+    transition: all ease 0.3s;
+}
+
+.campus-box .box2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.campus-box .box2::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 99, 71, 0.307);
+    z-index: 9;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: all ease-out 0.3s;
+}
+
+.campus-box .box2:hover::after {
+    top: 0;
+    left: 0;
+}
+
+/** facility section **/
+.facility-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.facility-section h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 0.6;
+    text-transform: capitalize;
+}
+
+.facility-section p {
+    color: #000;
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.facility-box {
+    gap: 40px;
+    width: 100%;
+}
+
+.facility-box .count {
+    width: 30%;
+    height: 600px;
+}
+
+.facility-box .count .box3 {
+    width: 100%;
+    height: 300px;
+    background-color: tomato;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.facility-box .count .box3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.facility-box .count .box3 h3 {
+    color: #000;
+    font-weight: 600;
+    margin-block: 20px;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.facility-box .count .box3 p {
+    color: #000;
+}
+
+/** feedback section **/
+.feedback-section {
+    width: 100%;
+    padding-top: 90px;
+    flex-direction: column;
+    gap: 45px;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 0.5;
+    text-transform: capitalize;
+}
+
+.feedback-section p {
+    color: #000;
+    font-weight: 200;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.feedback-box {
+    width: 100%;
+    gap: 40px;
+}
+
+.feedback-box .box4 {
+    width: 47%;
+    background-color: #fff3f3;
+    height: 240px;
+    border-radius: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px;
+    gap: 30px;
+    position: relative;
+}
+
+.feedback-box .box4 .image {
+    height: 55px;
+    width: 12%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.feedback-box .box4 .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.feedback-box .box4 .text {
+    width: 88%;
+    text-align: left;
+}
+
+.feedback-box .box4 .text p {
+    width: 95%;
+    font-weight: 300;
+}
+
+.feedback-box .box4 .text h3 {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+    position: absolute;
+    bottom: 30px;
+}
+
+/** page3 **/
+.page3 {
+    width: 100%;
+    height: 68vh;
+    margin-top: 110px;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://uniofeduford.netlify.app/images/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+}
+
+.page3 h2 {
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.page3 button {
+    padding: 15px 40px;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    font-family: arial;
+}
+
+/** footer **/
+footer {
+    width: 100%;
+    flex-direction: column;
+    gap: 55px;
+    height: 45vh;
+    text-align: center;
+    padding-top: 60px;
+}
+
+footer h2 {
+    color: #000;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 0.5;
+    text-transform: capitalize; 
+}
+
+footer p {
+    color: #000000b9;
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+footer .credit {
+    color: #000;
+    font-size: 1.05;
+    font-weight: 300;
+}
+
+footer .credit span {
+    color: #5255f2;
+}
